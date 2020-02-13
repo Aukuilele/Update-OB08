@@ -1,0 +1,224 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="751,2521" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="731,2421" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of string) from {  &quot;Germany&quot;, &quot;Spain&quot;, &quot;Japan&quot;, &quot;Brazil&quot;, &quot;India&quot;, &quot;China&quot; }]" Name="A" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of string) from {&quot;01.02.1980&quot;, &quot;04.05.1985&quot;,&quot;06.08.1988&quot;,&quot;24.09.1999&quot;,&quot;18.11.1986&quot;,&quot;11.10.1983&quot;}]" Name="B" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of string)]" Name="C" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of string)]" Name="D" />
+      <Variable x:TypeArguments="s:DateTime" Name="tmpDate" />
+      <Variable x:TypeArguments="x:TimeSpan" Name="tmpspan" />
+      <Variable x:TypeArguments="x:String" Name="txt1" />
+      <Variable x:TypeArguments="scg:Dictionary(x:Int32, x:String)" Default="[New Dictionary(of Int32 , String ) From {{2006,&quot;Oscar Pereiro&quot;},{2007,&quot;Alberto Contador&quot;}, {2008, &quot;Carlos Sastre&quot;}, {2009,&quot;Alberto Contador&quot;}, {2010, &quot;Andy Schleck&quot;}, {2011, &quot;Cadel Evans&quot;}, {2012,&quot;Bradley Wiggins&quot;}, {2013,&quot;Chris Froome&quot;}, {2014,&quot;Vincenzo Nibali&quot;},{2015,&quot;Chris Froome&quot;},{2016,&quot;Chris Froome&quot;},{2017,&quot;Chris Froome&quot;}, {2018,&quot;Geraint Thomas&quot;}}]" Name="dicBikeChamp" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Int32)" Default="[New Dictionary(of String , Int32)]" Name="dicBikeChampCount" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:Double))" Default="[New Dictionary(Of String, Dictionary(Of String, Double)) From {&#xA;{&quot;John C&quot;, New Dictionary( Of String, Double) From {{&quot;Madrid&quot;,2.1},{&quot;Paris&quot;,1.1}}  },&#xA;{&quot;Sarah C&quot;, New Dictionary( Of String, Double) From {{&quot;New York&quot;,2.1},{&quot;Paris&quot;,3.3},{&quot;Berlin&quot;, 0.8}}  },&#xA;{&quot;Kyle R&quot;, New Dictionary( Of String, Double) From {{&quot;San Francisco&quot;,2.8},{&quot;New York&quot;,1.1}}  },&#xA;{&quot;Johnny B&quot;, New Dictionary( Of String, Double) From {{&quot;New York&quot;,2.1},{&quot;Paris&quot;,3.3}, {&quot;Cairo&quot;,1.3}, {&quot;Chicago&quot;,1.9}}  }&#xA;}]" Name="dicCity" />
+      <Variable x:TypeArguments="x:String" Name="Input" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="689,132" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Sort">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="scg:List(x:String)">[A]</InArgument>
+      </InvokeMethod.TargetObject>
+    </InvokeMethod>
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="689,132" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Reverse">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="scg:List(x:String)">[A]</InArgument>
+      </InvokeMethod.TargetObject>
+    </InvokeMethod>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="689,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[String.Join(&quot;,&quot;,A.GetRange(0,3))]" />
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="689,377" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[B]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:TimeSpan" Name="timespan" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:DateTime">[tmpDate]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(item.ToString,"dd.MM.yyyy", nothing)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[tmpDate.Month = DateTime.Now.Month]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <AddToCollection x:TypeArguments="x:String" Collection="[C]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[item.ToString]" />
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,318" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="variable1" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:TimeSpan">[tmpspan]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:TimeSpan">[Datetime.Now.Subtract(new DateTime(Datetime.Now.Year, tmpDate.Month, tmpDate.Day))]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[txt1]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[String.Format( "{0} days until the date {1}", Math.Abs(tmpspan.Days).ToString, tmpDate.Day.ToString+ "." + tmpDate.Month.ToString+"."+DateTime.Now.Year.ToString)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <AddToCollection x:TypeArguments="x:String" Collection="[D]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[txt1]" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="689,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[String.Join(&quot;,&quot;,C)]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="689,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[String.Join(&quot;,&quot;,D)]" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="689,526" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[dicBikeChamp.Values]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="winnerName" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,392" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Add Data" sap:VirtualizedContainerService.HintSize="611,300" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[dicBikeChampCount.ContainsKey(winnerName)]" sap:VirtualizedContainerService.HintSize="569,208" sap2010:WorkflowViewState.IdRef="If_2">
+                <If.Then>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[dicBikeChampCount(winnerName)]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[dicBikeChampCount(winnerName) + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </If.Then>
+                <If.Else>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[dicBikeChampCount(winnerName)]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </If.Else>
+              </If>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="689,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[String.Join(&quot;,&quot;,dicBikeChampCount)]" />
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="689,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Plz Input" Title="Plz Input">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Input]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="689,217" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[dicCity.Values]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <If Condition="[dicCity.ContainsKey(Input)]" sap:VirtualizedContainerService.HintSize="689,209" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[Input + &quot; : &quot; + dicCity(input).ToString]" />
+      </If.Then>
+      <If.Else>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="No Data" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
